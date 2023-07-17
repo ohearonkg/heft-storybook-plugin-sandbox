@@ -2,15 +2,27 @@ import React from "react";
 import classNames, { ArgumentArray } from "classnames";
 import styles from "./button.module.scss";
 
-const BUTTON_KINDS = ["PRIMARY", "SECONDARY"] as const;
-type ButtonKind = (typeof BUTTON_KINDS)[number];
+/**
+ * @public
+ */
+export const BUTTON_KINDS = ["PRIMARY", "SECONDARY"] as const;
+/**
+ * @public
+ */
+export type ButtonKind = (typeof BUTTON_KINDS)[number];
 
-interface IButtonProps extends React.ComponentPropsWithRef<"button"> {
+/**
+ * @public
+ */
+export interface IButtonProps extends React.ComponentPropsWithRef<"button"> {
   kind: ButtonKind;
 }
 
 const cx: (...args: ArgumentArray) => string = classNames.bind(styles);
 
+/**
+ * @public
+ */
 export function Button({
   children,
   kind,

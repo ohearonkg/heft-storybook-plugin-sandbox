@@ -1,4 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
-  "extends": "@rushstack/heft-web-rig/profiles/library/tsconfig-base.json"
+  "extends": "@rushstack/heft-web-rig/profiles/library/tsconfig-base.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src",
+    "rootDirs": ["src", "temp/sass-ts"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
