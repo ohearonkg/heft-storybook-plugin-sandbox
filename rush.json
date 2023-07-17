@@ -420,6 +420,10 @@
     {
       "packageName": "components",
       "projectFolder": "packages/components"
+    },
+    {
+      "packageName": "storykit",
+      "projectFolder": "packages/storykit"
     }
   ]
 }

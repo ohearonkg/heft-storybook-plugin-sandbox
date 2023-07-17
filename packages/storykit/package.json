@@ -1,0 +1,32 @@
+{
+  "name": "storykit",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": "Microsoft",
+  "main": "lib/index.js",
+  "types": "dist/lib.d.ts",
+  "scripts": {
+    "_phase:build": "heft build --clean",
+    "build": "heft build --clean",
+    "rebuild": "heft build --clean"
+  },
+  "dependencies": {
+    "@babel/core": "~7.21.0",
+    "@storybook/addon-a11y": "~6.5.10",
+    "@storybook/addon-actions": "~6.5.10",
+    "@storybook/addon-essentials": "~6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/react": "~6.5.16",
+    "babel-loader": "~9.1.2",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "webpack": "~5.75.0"
+  },
+  "devDependencies": {
+    "@rushstack/heft": "~0.56.0",
+    "@rushstack/heft-node-rig": "~2.2.10",
+    "@types/heft-jest": "~1.0.3",
+    "@types/react": "~18.0.28",
+    "@types/react-dom": "~18.0.11"
+  }
+}
