@@ -86,10 +86,11 @@ dist
 # keeping the output folder to prevent a build
 # error when storybook attempts to clean the /storybook-static
 # folder
-packages/docs/storybook-public
+packages/storybook/storybook-public/*
+!packages/storybook/storybook-public/.gitkeep
 
-packages/docs/storybook-static
+packages/storybook/storybook-static
 
 
 # Symlinked node_modules via heft storybook plugin
-packages/docs/.storybook/node_modules
+packages/storybook/.storybook/node_modules

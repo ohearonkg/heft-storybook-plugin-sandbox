@@ -424,6 +424,10 @@
     {
       "packageName": "storykit",
       "projectFolder": "packages/storykit"
+    },
+    {
+      "packageName": "storybook",
+      "projectFolder": "packages/storybook"
     }
   ]
 }

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft.schema.json",
+  "phasesByName": {
+    "build": {
+      "cleanFiles": [
+        { "sourcePath": "lib" },
+        { "sourcePath": "temp" },
+        { "sourcePath": "storybook-static" }
+      ],
+      "tasksByName": {
+        "copy-mdx": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft",
+            "pluginName": "copy-files-plugin",
+            "options": {
+              "copyOperations": [
+                {
+                  "sourcePath": "src",
+                  "destinationFolders": ["lib"],
+                  "includeGlobs": ["**/*.mdx"]
+                }
+              ]
+            }
+          }
+        },
+        "copy-assets": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft",
+            "pluginName": "copy-files-plugin",
+            "options": {
+              "copyOperations": [
+                {
+                  "sourcePath": "assets",
+                  "destinationFolders": ["storybook-public"],
+                  "includeGlobs": ["**/*"]
+                }
+              ]
+            }
+          }
+        },
+        "typescript": {
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-typescript-plugin"
+          }
+        },
+        "build-storybook": {
+          "taskDependencies": ["copy-mdx", "copy-assets", "typescript"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft-storybook-plugin",
+            "options": {
+              "storykitPackageName": "storykit",
+              "startupModulePath": "@storybook/react/bin/index.js",
+              "staticBuildModulePath": "@storybook/react/bin/build.js",
+              "staticBuildOutputFolder": "storybook-static"
+            }
+          }
+        }
+      }
+    }
+  }
+}

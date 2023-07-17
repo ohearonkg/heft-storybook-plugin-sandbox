@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush-project.schema.json",
+  "operationSettings": [
+    {
+      "operationName": "build",
+      "outputFolderNames": [
+        "lib",
+        "storybook-static",
+        "storybook-public",
+        "temp"
+      ]
+    },
+    {
+      "operationName": "_phase:build",
+      "outputFolderNames": [
+        "lib",
+        "storybook-static",
+        "storybook-public",
+        "temp"
+      ]
+    }
+  ]
+}

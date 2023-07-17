@@ -1,0 +1,40 @@
+{
+  "name": "storybook",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "_phase:build": "heft run --only build -- --clean",
+    "build": "heft build --clean --storybook",
+    "start": "heft build-watch --storybook"
+  },
+  "dependencies": {
+    "classnames": "~2.3.2",
+    "components": "workspace:*",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "tslib": "~2.5.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-config": "~3.3.2",
+    "@rushstack/heft": "~0.56.0",
+    "@rushstack/heft-sass-plugin": "~0.11.13",
+    "@rushstack/heft-storybook-plugin": "~0.3.13",
+    "@rushstack/heft-typescript-plugin": "~0.1.17",
+    "@storybook/react": "~6.5.16",
+    "@types/mdx": "~2.0.4",
+    "@types/node": "~18.14.4",
+    "@types/react": "~18.0.28",
+    "@types/react-dom": "~18.0.11",
+    "css-loader": "~5.2.7",
+    "sass": "~1.58.3",
+    "sass-loader": "~10.1.1",
+    "storykit": "workspace:*",
+    "style-loader": "~2.0.0",
+    "typescript": "~5.0.4",
+    "webpack-merge": "~5.8.0"
+  }
+}
