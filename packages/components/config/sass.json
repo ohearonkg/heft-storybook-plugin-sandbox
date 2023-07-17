@@ -1,0 +1,5 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/heft-sass-plugin.schema.json",
+  "exportAsDefault": false,
+  "fileExtensions": [".sass", ".scss"]
+}

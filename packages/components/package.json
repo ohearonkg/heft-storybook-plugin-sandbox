@@ -1,0 +1,28 @@
+{
+  "name": "components",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": "Microsoft",
+  "main": "lib-commonjs/index.js",
+  "module": "lib/index.js",
+  "typings": "dist/lib.d.ts",
+  "scripts": {
+    "_phase:build": "heft run --only build -- --clean",
+    "_phase:test": "heft run --only test -- --clean",
+    "build": "heft test --clean",
+    "start": "heft build-watch"
+  },
+  "dependencies": {
+    "classnames": "~2.3.2",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "tslib": "~2.5.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-config": "~3.3.2",
+    "@rushstack/heft": "~0.56.0",
+    "@rushstack/heft-web-rig": "~0.18.17",
+    "@types/heft-jest": "~1.0.3",
+    "@types/react": "~18.0.28"
+  }
+}
